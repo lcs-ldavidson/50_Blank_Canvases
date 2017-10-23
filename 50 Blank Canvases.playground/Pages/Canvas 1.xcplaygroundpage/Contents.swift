@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 300, height: 400)
 
 /*:
  ## Add your code below
@@ -23,6 +23,73 @@ let canvas = Canvas(width: 400, height: 300)
  Use whitespace and comments as appropriate.
  */
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
+
+canvas.drawShapesWithFill = false
+
+canvas.defaultBorderWidth = 1
+
+
+
+for x in stride(from: 0, through: 350, by: 30) {
+    
+    for y in stride(from: 0, through: 450, by: 50) {
+
+canvas.drawEllipse(centreX: x, centreY: y, width: 60, height: 60)
+
+
+}
+
+}
+
+
+
+
+
+
+for x in stride(from: 15, through: 350, by: 30) {
+    
+    for y in stride(from: 25, through: 450, by: 50) {
+        
+        canvas.drawEllipse(centreX: x, centreY: y, width: 60, height: 60)
+        
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
