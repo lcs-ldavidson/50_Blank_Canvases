@@ -68,20 +68,71 @@ for a in stride(from: 0, through: 450, by: 45) {
 canvas.fillColor = Color.init(hue: 30, saturation: 0, brightness: 70, alpha: 100)
 
 
-var offset = random(from: 18, toButNotIncluding: 27)
-
-var yoffset = random(from: -4, toButNotIncluding: 5)
 
 
+
+
+//the inner circles
+
+
+
+for xcentre in stride(from: 22, through: 450, by: 45) {
+    
+    for ycentre in stride(from: 0, through: 350, by: 75) {
+
+        let direction = random(from: 1, toButNotIncluding: 9)
+        
+var xOffset = 0
+var yOffset = 0
+        
+if direction == 1 {  // NE
+    xOffset = 5
+    yOffset = 5
+}
+
+    else if direction == 2 { // N
+    yOffset = 5
+    }
+    
+    
+    else if direction == 3 { // NW
+        xOffset = -5
+        yOffset = 5
+        }
+    
+    
+    else if direction == 4 {//W
+    xOffset = -5
+        }
+        
+else if direction == 5 { // SW
+    yOffset = -5
+    xOffset = -5
+        }
+        
+        
+else if direction == 6 { // S
+    yOffset = -5
+        }
+        
+        
+else if direction == 7 { // SE
+    yOffset = -5
+    xOffset = 5
+        }
+        
+        
+else if direction == 8 { // E
+    xOffset = 5
+        }
+        
     
 
+    canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 30, height: 30)
 
-canvas.drawEllipse(centreX: offset, centreY: yoffset, width: 35, height: 35)
 
-canvas.translate(byX: 45, byY: 0)
-
-canvas.drawEllipse(centreX: offset, centreY: yoffset, width: 35, height: 35)
-
+}
+}
 
 
 
@@ -93,11 +144,275 @@ canvas.drawEllipse(centreX: offset, centreY: yoffset, width: 35, height: 35)
 
 
 
+//inner circle offset
+
+
+for xcentre in stride(from: 0, through: 450, by: 45) {
+    
+    for ycentre in stride(from: 38, through: 350, by: 75) {
+        
+        let direction = random(from: 1, toButNotIncluding: 9)
+        
+        var xOffset = 0
+        var yOffset = 0
+        
+        if direction == 1 {  // NE
+            xOffset = 5
+            yOffset = 5
+        }
+            
+        else if direction == 2 { // N
+            yOffset = 5
+        }
+            
+            
+        else if direction == 3 { // NW
+            xOffset = -5
+            yOffset = 5
+        }
+            
+            
+        else if direction == 4 {//W
+            xOffset = -5
+        }
+            
+        else if direction == 5 { // SW
+            yOffset = -5
+            xOffset = -5
+        }
+            
+            
+        else if direction == 6 { // S
+            yOffset = -5
+        }
+            
+            
+        else if direction == 7 { // SE
+            yOffset = -5
+            xOffset = 5
+        }
+            
+            
+        else if direction == 8 { // E
+            xOffset = 5
+        }
+        
+        
+        
+        canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 30, height: 30)
+        
+        
+    }
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+// the inner, BRIGHTER circles
+
+canvas.fillColor = Color.init(hue: 30, saturation: 0, brightness: 90, alpha: 100)
+
+
+
+
+
+
+//the inner circles
+
+
+
+for xcentre in stride(from: 22, through: 450, by: 45) {
+    
+    for ycentre in stride(from: 0, through: 350, by: 75) {
+        
+        let direction = random(from: 1, toButNotIncluding: 9)
+        
+        var xOffset = 0
+        var yOffset = 0
+        
+        if direction == 1 {  // NE
+            xOffset = 5
+            yOffset = 5
+        }
+            
+        else if direction == 2 { // N
+            yOffset = 5
+        }
+            
+            
+        else if direction == 3 { // NW
+            xOffset = -5
+            yOffset = 5
+        }
+            
+            
+        else if direction == 4 {//W
+            xOffset = -5
+        }
+            
+        else if direction == 5 { // SW
+            yOffset = -5
+            xOffset = -5
+        }
+            
+            
+        else if direction == 6 { // S
+            yOffset = -5
+        }
+            
+            
+        else if direction == 7 { // SE
+            yOffset = -5
+            xOffset = 5
+        }
+            
+            
+        else if direction == 8 { // E
+            xOffset = 5
+        }
+        
+        
+        
+        canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 20, height: 20)
+        
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//inner circle offset
+
+
+for xcentre in stride(from: 0, through: 450, by: 45) {
+    
+    for ycentre in stride(from: 38, through: 350, by: 75) {
+        
+        let direction = random(from: 1, toButNotIncluding: 9)
+        
+        var xOffset = 0
+        var yOffset = 0
+        
+        if direction == 1 {  // NE
+            xOffset = 5
+            yOffset = 5
+        }
+            
+        else if direction == 2 { // N
+            yOffset = 5
+        }
+            
+            
+        else if direction == 3 { // NW
+            xOffset = -5
+            yOffset = 5
+        }
+            
+            
+        else if direction == 4 {//W
+            xOffset = -5
+        }
+            
+        else if direction == 5 { // SW
+            yOffset = -5
+            xOffset = -5
+        }
+            
+            
+        else if direction == 6 { // S
+            yOffset = -5
+        }
+            
+            
+        else if direction == 7 { // SE
+            yOffset = -5
+            xOffset = 5
+        }
+            
+            
+        else if direction == 8 { // E
+            xOffset = 5
+        }
+        
+        
+        
+        canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 20, height: 20)
+        
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//tiny circles
+
+canvas.fillColor = Color.init(hue: 30, saturation: 0, brightness: 10, alpha: 100)
+
+
+for a in stride(from: 0, through: 450, by: 45) {
+    
+    for b in stride(from: 38, through: 300, by: 75) {
+        
+        canvas.drawEllipse(centreX: a, centreY: b, width: 8, height: 8)
+    }
+}
+        
+        for x in stride(from: 22, through: 450, by: 45) {
+            
+            for y in stride(from: 0, through: 300, by: 75) {
+                
+                
+                canvas.drawEllipse(centreX: x, centreY: y, width: 8, height: 8)
+            }
+}
 
 /*:
  ## Use source control
