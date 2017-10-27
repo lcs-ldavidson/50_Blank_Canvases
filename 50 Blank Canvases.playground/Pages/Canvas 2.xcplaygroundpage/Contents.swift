@@ -24,8 +24,7 @@ let canvas = Canvas(width: 450, height: 300)
  */
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
-
-
+//background
 canvas.fillColor = Color.black
 
 canvas.drawShapesWithBorders = false
@@ -33,6 +32,11 @@ canvas.drawShapesWithBorders = false
 
 canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 450, height: 300)
 
+
+
+
+
+// biggest circles
 
 canvas.fillColor = Color.init(hue: 30, saturation: 0, brightness: 55, alpha: 100)
 
@@ -63,17 +67,33 @@ for a in stride(from: 0, through: 450, by: 45) {
 }
 
 
-// inner circles
-
-canvas.fillColor = Color.init(hue: 30, saturation: 0, brightness: 70, alpha: 100)
 
 
 
 
 
 
-//the inner circles
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//the inner changing circles
+
+let hu = random(from: 0, toButNotIncluding: 361)
 
 
 for xcentre in stride(from: 22, through: 450, by: 45) {
@@ -81,70 +101,68 @@ for xcentre in stride(from: 22, through: 450, by: 45) {
     for ycentre in stride(from: 0, through: 350, by: 75) {
 
         let direction = random(from: 1, toButNotIncluding: 9)
+        
+        
+        let hu = random(from: 0, toButNotIncluding: 361)
+        
+        canvas.fillColor = Color.init(hue: hu, saturation: 100, brightness: 80, alpha: 100)
         
 var xOffset = 0
 var yOffset = 0
         
 if direction == 1 {  // NE
-    xOffset = 5
-    yOffset = 5
+    xOffset = 3
+    yOffset = 3
 }
 
     else if direction == 2 { // N
-    yOffset = 5
+    yOffset = 3
     }
     
     
     else if direction == 3 { // NW
-        xOffset = -5
-        yOffset = 5
+        xOffset = -3
+        yOffset = 3
         }
     
     
     else if direction == 4 {//W
-    xOffset = -5
+    xOffset = -3
         }
         
 else if direction == 5 { // SW
-    yOffset = -5
-    xOffset = -5
+    yOffset = -3
+    xOffset = -3
         }
         
         
 else if direction == 6 { // S
-    yOffset = -5
+    yOffset = -3
         }
         
         
 else if direction == 7 { // SE
-    yOffset = -5
-    xOffset = 5
+    yOffset = -3
+    xOffset = 3
         }
         
         
 else if direction == 8 { // E
-    xOffset = 5
+    xOffset = 3
         }
         
     
 
-    canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 30, height: 30)
+    canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 35, height: 35)
 
 
 }
 }
 
 
+//inner changing circle offset
 
 
-
-
-
-
-
-
-
-//inner circle offset
 
 
 for xcentre in stride(from: 0, through: 450, by: 45) {
@@ -153,53 +171,57 @@ for xcentre in stride(from: 0, through: 450, by: 45) {
         
         let direction = random(from: 1, toButNotIncluding: 9)
         
+        let hu = random(from: 0, toButNotIncluding: 361)
+        
+        canvas.fillColor = Color.init(hue: hu, saturation: 100, brightness: 80, alpha: 100)
+        
         var xOffset = 0
         var yOffset = 0
         
         if direction == 1 {  // NE
-            xOffset = 5
-            yOffset = 5
+            xOffset = 3
+            yOffset = 3
         }
             
         else if direction == 2 { // N
-            yOffset = 5
+            yOffset = 3
         }
             
             
         else if direction == 3 { // NW
-            xOffset = -5
-            yOffset = 5
+            xOffset = -3
+            yOffset = 3
         }
             
             
         else if direction == 4 {//W
-            xOffset = -5
+            xOffset = -3
         }
             
         else if direction == 5 { // SW
-            yOffset = -5
-            xOffset = -5
+            yOffset = -3
+            xOffset = -3
         }
             
             
         else if direction == 6 { // S
-            yOffset = -5
+            yOffset = -3
         }
             
             
         else if direction == 7 { // SE
-            yOffset = -5
-            xOffset = 5
+            yOffset = -3
+            xOffset = 3
         }
             
             
-        else if direction == 8 { // E
-            xOffset = 5
+        else if direction == 38 { // E
+            xOffset = 3
         }
         
         
         
-        canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 30, height: 30)
+        canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 35, height: 35)
         
         
     }
@@ -219,74 +241,41 @@ for xcentre in stride(from: 0, through: 450, by: 45) {
 
 
 
-// the inner, BRIGHTER circles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// the inner, BRIGHTEST circles
 
 canvas.fillColor = Color.init(hue: 30, saturation: 0, brightness: 90, alpha: 100)
 
 
+for x in stride(from: 22, through: 450, by: 45) {
+    for y in stride(from: 0, through: 300, by: 75) {
+        
+        canvas.drawEllipse(centreX: x, centreY: y, width: 25, height: 25)
+        
+        
+    }
+}
 
-
-
-
-//the inner circles
-
-
-
-for xcentre in stride(from: 22, through: 450, by: 45) {
+for x in stride(from: 0, through: 450, by: 45) {
+    for y in stride(from: 38, through: 300, by: 75) {
     
-    for ycentre in stride(from: 0, through: 350, by: 75) {
-        
-        let direction = random(from: 1, toButNotIncluding: 9)
-        
-        var xOffset = 0
-        var yOffset = 0
-        
-        if direction == 1 {  // NE
-            xOffset = 5
-            yOffset = 5
-        }
-            
-        else if direction == 2 { // N
-            yOffset = 5
-        }
-            
-            
-        else if direction == 3 { // NW
-            xOffset = -5
-            yOffset = 5
-        }
-            
-            
-        else if direction == 4 {//W
-            xOffset = -5
-        }
-            
-        else if direction == 5 { // SW
-            yOffset = -5
-            xOffset = -5
-        }
-            
-            
-        else if direction == 6 { // S
-            yOffset = -5
-        }
-            
-            
-        else if direction == 7 { // SE
-            yOffset = -5
-            xOffset = 5
-        }
-            
-            
-        else if direction == 8 { // E
-            xOffset = 5
-        }
-        
-        
-        
-        canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 20, height: 20)
-        
-        
+    canvas.drawEllipse(centreX: x, centreY: y, width: 25, height: 25)
+    
+    
     }
 }
 
@@ -294,72 +283,6 @@ for xcentre in stride(from: 22, through: 450, by: 45) {
 
 
 
-
-
-
-
-
-
-//inner circle offset
-
-
-for xcentre in stride(from: 0, through: 450, by: 45) {
-    
-    for ycentre in stride(from: 38, through: 350, by: 75) {
-        
-        let direction = random(from: 1, toButNotIncluding: 9)
-        
-        var xOffset = 0
-        var yOffset = 0
-        
-        if direction == 1 {  // NE
-            xOffset = 5
-            yOffset = 5
-        }
-            
-        else if direction == 2 { // N
-            yOffset = 5
-        }
-            
-            
-        else if direction == 3 { // NW
-            xOffset = -5
-            yOffset = 5
-        }
-            
-            
-        else if direction == 4 {//W
-            xOffset = -5
-        }
-            
-        else if direction == 5 { // SW
-            yOffset = -5
-            xOffset = -5
-        }
-            
-            
-        else if direction == 6 { // S
-            yOffset = -5
-        }
-            
-            
-        else if direction == 7 { // SE
-            yOffset = -5
-            xOffset = 5
-        }
-            
-            
-        else if direction == 8 { // E
-            xOffset = 5
-        }
-        
-        
-        
-        canvas.drawEllipse(centreX: xcentre + xOffset, centreY: ycentre + yOffset, width: 20, height: 20)
-        
-        
-    }
-}
 
 
 
