@@ -25,6 +25,73 @@ let canvas = Canvas(width: 400, height: 300)
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
 
+canvas.fillColor = Color.black
+
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 300)
+
+//Background
+
+canvas.drawShapesWithBorders = false
+
+for x in stride(from: 0, through: 400, by: 20) {
+    for y in stride(from: 0, through: 300, by: 20) {
+        
+        var hue = random(from: 30, toButNotIncluding: 51)
+        
+        var brightness = random(from: 20, toButNotIncluding: 101)
+        
+        var size = random(from: 10, toButNotIncluding: 31)
+        
+        if hue == 40 {
+            
+         canvas.fillColor = Color.green
+        } else {
+        
+        
+        
+        canvas.fillColor = Color.init(hue: hue, saturation: 100, brightness: brightness, alpha: 100)
+            
+        }
+        
+        canvas.drawEllipse(centreX: x, centreY: y, width: size, height: size)
+        
+        
+    }
+}
+
+//monster
+
+canvas.fillColor = Color.black
+
+canvas.drawEllipse(centreX: 200, centreY: 150, width: 250, height: 250)
+
+canvas.drawRectangle(bottomLeftX: 75, bottomLeftY: 0, width: 250, height: 150)
+
+canvas.fillColor = Color.red
+
+canvas.drawEllipse(centreX: 130, centreY: 150, width: 80, height: 80)
+
+canvas.drawEllipse(centreX: 270, centreY: 150, width: 80, height: 80)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*:
  ## Use source control
