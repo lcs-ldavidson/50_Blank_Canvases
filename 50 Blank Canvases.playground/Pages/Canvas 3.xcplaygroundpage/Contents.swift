@@ -75,7 +75,9 @@ canvas.drawEllipse(centreX: 270, centreY: 150, width: 80, height: 80)
 
 
 
+//eyebows
 
+canvas.drawLine(fromX: 90, fromY: 190, toX: 170, toY: 150)
 
 
 
