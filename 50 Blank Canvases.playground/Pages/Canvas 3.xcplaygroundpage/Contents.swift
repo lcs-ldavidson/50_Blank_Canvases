@@ -77,7 +77,52 @@ canvas.drawEllipse(centreX: 270, centreY: 150, width: 80, height: 80)
 
 //eyebows
 
-canvas.drawLine(fromX: 90, fromY: 190, toX: 170, toY: 150)
+for y in stride(from: 150, through: 210, by: 1) {
+
+canvas.drawLine(fromX: 90, fromY: 190, toX: 170, toY: y)
+
+
+canvas.drawLine(fromX: 310, fromY: 190, toX: 230, toY: y)
+
+}
+
+
+
+
+//pupils
+
+canvas.fillColor = Color.black
+
+
+var view = random(from: 1, toButNotIncluding: 4)
+
+if view == 1 {
+    
+    let offset = 30 }
+    
+    else if view == 2 {
+        
+        let offset = -30
+        
+    
+    
+   
+canvas.drawEllipse(centreX: 130 + offset, centreY: 150, width: 30, height: 30)
+
+canvas.drawEllipse(centreX: 270 + offset, centreY: 150, width: 30, height: 30)
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
