@@ -87,44 +87,99 @@ canvas.drawLine(fromX: 310, fromY: 190, toX: 230, toY: y)
 }
 
 
+//speech bubble
 
+canvas.fillColor = Color.white
+
+canvas.drawShapesWithBorders = true
+
+canvas.borderColor = Color.black
+
+canvas.defaultBorderWidth = 5
+
+canvas.drawEllipse(centreX: 200, centreY: 0, width: 400, height: 140)
 
 //pupils
 
 canvas.fillColor = Color.black
 
+var offset = 0
 
 var view = random(from: 1, toButNotIncluding: 4)
 
 if view == 1 {
     
-    let offset = 30 }
+    offset = 25
     
-    else if view == 2 {
+    print( " Phew, we're safe!" )
+    
+    canvas.textColor = Color.green
+    
+    canvas.drawText(message: "Phew, we're safe!", size: 35, x: 60, y: 0)
+    
+} else if view == 2 {
+    
+    offset = -25
+    
+    print("Phew, we're safe!")
+    
+    canvas.textColor = Color.green
+    
+    canvas.drawText(message: "Phew, we're safe!", size: 35, x: 60, y: 0)
+
+} else if view == 3 {
+    
+   offset = 0
+    
+    print("Oh no, he found us!")
+    
+    canvas.textColor = Color.red
+    
+    
+    canvas.drawShapesWithFill = true
+    
+    canvas.drawShapesWithBorders = false
+    
+    
+    
+    
+    
+    
+    
+    canvas.fillColor = Color.init(hue: 10, saturation: 100, brightness: 70, alpha: 7)
+    
+    
+    for width in stride(from: 300, to: 1, by: -10) {
         
-        let offset = -30
+        canvas.drawEllipse(centreX: 130, centreY: 150, width: width, height: width)
+    }
+    
+    
+    for width in stride(from: 300, to: 1, by: -10) {
+        
+        canvas.drawEllipse(centreX: 270, centreY: 150, width: width, height: width)
+        
+        
+    }
+
+    
+    
+    
+    
+    
+    
+   canvas.drawText(message: "Oh no, he found us!", size: 35, x: 45, y: 0)
+    
+    
+}
         
     
     
    
+
 canvas.drawEllipse(centreX: 130 + offset, centreY: 150, width: 30, height: 30)
 
 canvas.drawEllipse(centreX: 270 + offset, centreY: 150, width: 30, height: 30)
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
